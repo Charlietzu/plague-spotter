@@ -48,7 +48,7 @@ export class DataOverlay extends Component {
                 <div className="data-wrapper">
                     <div className="data-container">
                         <div className="data-header">
-                            <h1>{this.state.country} Covid-19 </h1>
+                            <h1> Dados do Covid-19 no {this.state.country} </h1>
                         </div>
         
                         <div className="data-body">
@@ -56,7 +56,7 @@ export class DataOverlay extends Component {
                             <div>{this.state.tested}</div>
                             <div>Infectados: </div>
                             <div>{this.state.infected}</div>
-                            <div>Mortos: </div>
+                            <div>Óbitos: </div>
                             <div>{this.state.deceased}</div>
                             <div>Curados: </div>
                             <div>{this.state.recovered}</div>
