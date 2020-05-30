@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import GoogleMapReact from "google-map-react";
-import { render } from "@testing-library/react";
 
 class Map extends Component {
   static defaultProps = {
@@ -8,7 +7,7 @@ class Map extends Component {
       lat: 59.95,
       lng: 30.33,
     },
-    zoom: 11,
+    zoom: -50,
   };
 
   render() {
