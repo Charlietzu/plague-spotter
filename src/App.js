@@ -1,11 +1,11 @@
 import React from "react";
 import "./App.css";
-import Map from "./components/map/Map";
+import MapManager from "./components/map/MapManager";
 
 function App() {
   return (
     <div className="App">
-      <Map />
+      <MapManager />
     </div>
   );
 }
