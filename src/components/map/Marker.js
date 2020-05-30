@@ -1,4 +1,4 @@
-export default function renderMarker(map, maps, lat, lng, country) {
+export default function renderMarker(map, maps, lat, lng, country, callback) {
   let marker = new maps.Marker({
     position: {
       lat,
@@ -7,4 +7,5 @@ export default function renderMarker(map, maps, lat, lng, country) {
     map,
     title: country,
   });
+  marker.addListener('click', () => callback(country))
 }
