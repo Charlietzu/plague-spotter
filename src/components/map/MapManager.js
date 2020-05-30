@@ -17,17 +17,6 @@ class MapManager extends Component {
 
   render() {
     return (
-      // Important! Always set the container height explicitly
-      /*
-      <div style={{ height: "100vh", width: "100%" }}>
-        <GoogleMapReact
-          bootstrapURLKeys={{ key: API_KEY }}
-          defaultCenter={this.props.center}
-          defaultZoom={this.props.zoom}
-          onGoogleApiLoaded={({ map, maps }) => renderMarker(map, maps)}
-        ></GoogleMapReact>
-        */
-
       <div style={{ height: "100vh", width: "100%" }}>
         <GoogleMapReact
           bootstrapURLKeys={{ key: API_KEY }}
@@ -36,7 +25,6 @@ class MapManager extends Component {
           onGoogleApiLoaded={({ map, maps }) =>
             Object.entries(this.props.countriesData).map((country) => {
               let countries = country[1];
-              console.log(countries);
               renderMarker(
                 map,
                 maps,
@@ -51,13 +39,4 @@ class MapManager extends Component {
     );
   }
 }
-/*this.props.countries.map((country) => {
-              renderMarker(
-                map,
-                maps,
-                country.lat,
-                country.lng,
-                country.country
-              );
-            }) */
 export default MapManager;
