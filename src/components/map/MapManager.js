@@ -8,7 +8,7 @@ const API_KEY = "AIzaSyDEZBGmstNOX29tWnSVv_Auy3U-mRgmAfY";
 class MapManager extends Component {
   static defaultProps = {
     center: {
-      lat: -15.77972,
+      lat: -15.76972,
       lng: -47.92972,
     },
     zoom: 11,
