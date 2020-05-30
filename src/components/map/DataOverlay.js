@@ -18,15 +18,7 @@ export class DataOverlay extends Component {
                 if(data === false)
                     return
 
-                let { infected, tested, recovered, deceased, deaths } = data
-
-                if(!isNaN(deaths) && Number.isInteger(deceased)){
-                    deceased += deaths
-                }
-
-                if(isNaN(deceased) && Number.isInteger(deaths)){
-                    deceased = deaths
-                }
+                let { infected, tested, recovered, deceased} = data
 
                 this.setState({
                     infected, 
