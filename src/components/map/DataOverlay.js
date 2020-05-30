@@ -32,10 +32,6 @@ export class DataOverlay extends Component {
         }
     }
 
-    componentDidUpdate(){
-        
-    }
-
     async getData(country, callback) {
         let world = await getWorldData()
         let countryObj = world.filter(data => data.country === country)[0]

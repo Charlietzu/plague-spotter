@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import GoogleMapReact from "google-map-react";
 import renderMarker from "./Marker";
 import DataOverlay from "./DataOverlay.js";
+import { getWorldData } from '../../util/covid_api'
 
 var countriesData = require("../../data/countries.json");
 const API_KEY = "AIzaSyDEZBGmstNOX29tWnSVv_Auy3U-mRgmAfY";
@@ -21,6 +22,26 @@ class MapManager extends Component {
     country:undefined
   }
 
+  iterateTest() {
+    let countriesJSON = {};
+    let countriesAPI = {};
+
+    Object.entries(this.props.countriesData).map((country) => {
+      let countriesJSONAux= {}
+      countriesJSONAux[country[0]] = country[1];
+      countriesJSON = Object.assign(countriesJSON, countriesJSONAux);
+    });
+
+    getWorldData().then((json) => {
+      Object.entries(json).map((countryAPI) => {
+        countriesAPI[countryAPI[1].country] = countryAPI[1];
+      });
+    });
+
+    console.log(countriesJSON);
+    console.log(countriesAPI);
+  }
+
   showDataDetails = (country) => {
     this.setState({
       showDataDetails:true, 
@@ -29,6 +50,7 @@ class MapManager extends Component {
   }
 
   render() {
+    this.iterateTest()
     return (
       <div style={{ height: "100vh", width: "100%" }}>
         <GoogleMapReact
