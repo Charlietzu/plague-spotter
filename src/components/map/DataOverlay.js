@@ -22,8 +22,9 @@ export class DataOverlay extends Component {
       this.setState({ show: newProps.show, country: newProps.country });
       this.getData(newProps.country, (data) => {
         if (data === false) return;
-
-        let { infected, tested, recovered, deceased } = data;
+        
+        console.log(data)
+        let { infected, tested, recovered, deceased, density } = data;
 
         this.setState({
           show: newProps.show,
@@ -32,6 +33,7 @@ export class DataOverlay extends Component {
           tested,
           recovered,
           deceased,
+          density,
         });
       });
     }
@@ -39,12 +41,15 @@ export class DataOverlay extends Component {
 
   getData(country, callback) {
     let world = this.context.countriesCovid;
-    
+    let worldDensity = this.context.countriesDensity
+
     let countryObj = world.filter((data) => data.country === country)[0];
+    let countryDensity = worldDensity.filter(data => data.country === country)[0];
 
     if (!countryObj) {
       this.setState({ haveData: false });
     } else {
+      countryObj = Object.assign(countryObj, countryDensity)
       this.setState({ haveData: true });
     }
 
@@ -55,6 +60,8 @@ export class DataOverlay extends Component {
     if (this.state.haveData) {
       return (
         <div className="data-body">
+          <div>Density: </div>
+          <div>{this.state.density}</div>
           <div>Tested: </div>
           <div>{this.state.tested}</div>
           <div>Infected: </div>
