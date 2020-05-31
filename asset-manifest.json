@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/plague-spotter/static/css/main.a0c4a010.chunk.css",
-    "main.js": "/plague-spotter/static/js/main.c0ca76d9.chunk.js",
-    "main.js.map": "/plague-spotter/static/js/main.c0ca76d9.chunk.js.map",
+    "main.js": "/plague-spotter/static/js/main.3665b1f4.chunk.js",
+    "main.js.map": "/plague-spotter/static/js/main.3665b1f4.chunk.js.map",
     "runtime-main.js": "/plague-spotter/static/js/runtime-main.a002ba7a.js",
     "runtime-main.js.map": "/plague-spotter/static/js/runtime-main.a002ba7a.js.map",
     "static/css/2.af3c1da9.chunk.css": "/plague-spotter/static/css/2.af3c1da9.chunk.css",
     "static/js/2.098f5219.chunk.js": "/plague-spotter/static/js/2.098f5219.chunk.js",
     "static/js/2.098f5219.chunk.js.map": "/plague-spotter/static/js/2.098f5219.chunk.js.map",
     "index.html": "/plague-spotter/index.html",
-    "precache-manifest.c14688ba83994351a76a0f83233a544a.js": "/plague-spotter/precache-manifest.c14688ba83994351a76a0f83233a544a.js",
+    "precache-manifest.e4432008df8f0938a6466d3f94197c57.js": "/plague-spotter/precache-manifest.e4432008df8f0938a6466d3f94197c57.js",
     "service-worker.js": "/plague-spotter/service-worker.js",
     "static/css/2.af3c1da9.chunk.css.map": "/plague-spotter/static/css/2.af3c1da9.chunk.css.map",
     "static/css/main.a0c4a010.chunk.css.map": "/plague-spotter/static/css/main.a0c4a010.chunk.css.map",
@@ -20,6 +20,6 @@
     "static/css/2.af3c1da9.chunk.css",
     "static/js/2.098f5219.chunk.js",
     "static/css/main.a0c4a010.chunk.css",
-    "static/js/main.c0ca76d9.chunk.js"
+    "static/js/main.3665b1f4.chunk.js"
   ]
 }
