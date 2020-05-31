@@ -22,15 +22,15 @@ This will start the application at:
 
 Alex Mendonça<br />
 Control and Automation Engineer, graduated at UTFPR in Curitiba, acts as software develpment engineer.<br />
-Linkedin: `https://www.linkedin.com/in/mendoncaalex/`<br />
+Linkedin: https://www.linkedin.com/in/mendoncaalex/<br />
 Email: alextorezin@gmail.com <br />
 
 Ton Freitas<br />
 UX Designer.<br />
-Linkedin: `https://www.linkedin.com/in/ton-freitas`<br />
+Linkedin: https://www.linkedin.com/in/ton-freitas<br />
 Email: ton.algo.freitas@gmail.com <br />
 
 Caio César Silva<br />
 Front-end Developer, graduating at UFMG in Belo Horizonte.<br />
-Linkedin: `https://www.linkedin.com/in/caio-c%C3%A9sar-silva-1aa8b7101/`<br />
+Linkedin: https://www.linkedin.com/in/caio-c%C3%A9sar-silva-1aa8b7101/<br />
 Email: caiocesarsilva08@gmail.com <br />
