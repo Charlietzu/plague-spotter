@@ -23,8 +23,9 @@ export class DataOverlay extends Component {
       this.getData(newProps.country, (data) => {
         if (data === false) return;
         
-        console.log(data)
         let { infected, tested, recovered, deceased, density } = data;
+        
+        if(density == null) density = "N/A"
 
         this.setState({
           show: newProps.show,
