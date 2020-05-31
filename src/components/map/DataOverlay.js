@@ -5,10 +5,12 @@ import DataContext from '../../data/DataContext'
 
 export class DataOverlay extends Component {
   static contextType = DataContext
+
   state = {
     show: false,
     haveData: true,
   };
+  
   hide = () => {
     this.setState({
       show: false,

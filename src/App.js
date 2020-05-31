@@ -11,15 +11,12 @@ import "./App.css";
 
 class App extends Component {
   state = {
-    countriesJson:{},
-    countriesDensity:{},
-    countriesCovid:{},
   }
 
   componentWillMount(){
     getWorldData().then(json =>{
       this.setState({
-        countriesJson:countries,
+        countriesJson:countries.countries[0],
         countriesDensity:countriesDensity,
         countriesCovid:json,
       })
@@ -28,7 +25,7 @@ class App extends Component {
 
   render(){
     return (
-      <DataContext.Provider value ={this.state}>
+      <DataContext.Provider value={this.state}>
         <div style={{height:'100vh'}}>
           <Header />
           <Switch>
