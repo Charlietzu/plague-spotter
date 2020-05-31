@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "1685f7f06867f462a9ffe3969507db48",
+    "revision": "87035ac46e0040afc8447328653c0c3c",
     "url": "/plague-spotter/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/plague-spotter/static/css/2.af3c1da9.chunk.css"
   },
   {
-    "revision": "ebb2a50561a5f0c1ddc6",
+    "revision": "c846fd3afa459722e42e",
     "url": "/plague-spotter/static/css/main.28411818.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/plague-spotter/static/js/2.8ce9dc3d.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "ebb2a50561a5f0c1ddc6",
-    "url": "/plague-spotter/static/js/main.9b3baba2.chunk.js"
+    "revision": "c846fd3afa459722e42e",
+    "url": "/plague-spotter/static/js/main.687220f0.chunk.js"
   },
   {
     "revision": "bd38ec7111bd1e50dbee",
