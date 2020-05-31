@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "b2dd7c54a022d639cdede8340dfdadcd",
+    "revision": "1685f7f06867f462a9ffe3969507db48",
     "url": "/plague-spotter/index.html"
   },
   {
