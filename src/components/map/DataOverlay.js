@@ -6,6 +6,7 @@ import { Button } from "react-bootstrap";
 export class DataOverlay extends Component {
   state = {
     show: false,
+    haveData: true,
   };
   hide = () => {
     this.setState({
@@ -15,18 +16,19 @@ export class DataOverlay extends Component {
 
   componentWillReceiveProps(newProps) {
     if (newProps.show !== this.state.show) {
+      this.setState({ show: newProps.show, country: newProps.country });
       this.getData(newProps.country, (data) => {
         if (data === false) return;
 
         let { infected, tested, recovered, deceased } = data;
 
         this.setState({
+          show: newProps.show,
+          country: newProps.country,
           infected,
           tested,
           recovered,
           deceased,
-          show: newProps.show,
-          country: newProps.country,
         });
       });
     }
@@ -35,8 +37,36 @@ export class DataOverlay extends Component {
   async getData(country, callback) {
     let world = await getWorldData();
     let countryObj = world.filter((data) => data.country === country)[0];
+    if (!countryObj) {
+      this.setState({ haveData: false });
+    } else {
+      this.setState({ haveData: true });
+    }
 
     if (countryObj) callback(countryObj);
+  }
+
+  showCovidData() {
+    if (this.state.haveData) {
+      return (
+        <div className="data-body">
+          <div>Tested: </div>
+          <div>{this.state.tested}</div>
+          <div>Infected: </div>
+          <div>{this.state.infected}</div>
+          <div>Deaths: </div>
+          <div>{this.state.deceased}</div>
+          <div>Recovered: </div>
+          <div>{this.state.recovered}</div>
+        </div>
+      );
+    } else {
+      return (
+        <div className="ml-3">
+          <p>Sorry, we still don't have this data. :(</p>
+        </div>
+      );
+    }
   }
 
   render() {
@@ -50,16 +80,7 @@ export class DataOverlay extends Component {
               <h1> Covid-19 data in {this.state.country} </h1>
             </div>
 
-            <div className="data-body">
-              <div>Tested: </div>
-              <div>{this.state.tested}</div>
-              <div>Infected: </div>
-              <div>{this.state.infected}</div>
-              <div>Deaths: </div>
-              <div>{this.state.deceased}</div>
-              <div>Recovered: </div>
-              <div>{this.state.recovered}</div>
-            </div>
+            {this.showCovidData()}
 
             <div className="data-footer">
               <Button onClick={this.hide}>Exit</Button>

@@ -1,14 +1,21 @@
-import React from "react";
+import React, { useState } from "react";
 import { Navbar, Nav } from "react-bootstrap";
+import AboutModal from "./AboutModal";
 
-const Header = () => (
-  <Navbar bg="dark" variant="dark">
-    <Navbar.Brand href="/">Premap</Navbar.Brand>
-    <Nav className="mr-auto">
-      <Nav.Link href="/">Map</Nav.Link>
-      <Nav.Link href="/about">About</Nav.Link>
-    </Nav>
-  </Navbar>
-);
+function Header() {
+  const [modalShow, setModalShow] = useState(false);
+  return (
+    <>
+      <Navbar bg="dark" variant="dark">
+        <Navbar.Brand href="/">PREMAP</Navbar.Brand>
+        <Nav className="mr-auto">
+          <Nav.Link onClick={() => setModalShow(true)}>About</Nav.Link>
+        </Nav>
+      </Navbar>
+
+      <AboutModal show={modalShow} onHide={() => setModalShow(false)} />
+    </>
+  );
+}
 
 export default Header;
