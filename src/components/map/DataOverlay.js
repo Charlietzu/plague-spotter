@@ -28,8 +28,6 @@ export class DataOverlay extends Component {
         if (density == null) density = "N/A";
 
         this.setState({
-          show: newProps.show,
-          country: newProps.country,
           infected,
           tested,
           recovered,
