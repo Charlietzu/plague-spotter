@@ -21,7 +21,7 @@ This will start the application at:
 # PREMAP Collaborators
 
 Alex Mendonça<br />
-Control and Automation Engineer, graduated at UTFPR in Curitiba, acts as software develpment engineer.<br />
+Control and Automation Engineer, graduated at UTFPR in Curitiba, acts as software development engineer.<br />
 Linkedin: https://www.linkedin.com/in/mendoncaalex/<br />
 Email: alextorezin@gmail.com <br />
 

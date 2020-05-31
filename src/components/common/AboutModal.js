@@ -62,7 +62,7 @@ function AboutModal(props) {
         <h5>Carlos</h5>
         <h6>
           Control and Automation Engineer, graduated at UTFPR in Curitiba, acts
-          as software develpment engineer.{" "}
+          as software development engineer.{" "}
         </h6>
         <p>
           Linkedin:{" "}
