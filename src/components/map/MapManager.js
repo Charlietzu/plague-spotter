@@ -13,6 +13,7 @@ class MapManager extends Component {
     },
     zoom: 0
   };
+  static contextType = DataContext
   
   state = {
     showDataDetails: false,
@@ -28,38 +29,32 @@ class MapManager extends Component {
 
   render() {
     const windowH = window.innerHeight -56
+    const countriesLatLong = this.context.countriesJson
     return (
       <div style={{ height: windowH, width: "100%" }}>
-        <DataContext.Consumer>
-          { value => {
-              return(
-                <GoogleMapReact
-                  bootstrapURLKeys={{ key: API_KEY }}
-                  defaultCenter={this.props.center}
-                  defaultZoom={this.props.zoom}
-                  yesIWantToUseGoogleMapApiInternals={true}
-                  onGoogleApiLoaded={({ map, maps }) => {
-                    if(value.countriesJson !== undefined)
-                      Object.entries(value.countriesJson).map((country) => {
-                        let countries = country[1];
+        <GoogleMapReact
+          bootstrapURLKeys={{ key: API_KEY }}
+          defaultCenter={this.props.center}
+          defaultZoom={this.props.zoom}
+          yesIWantToUseGoogleMapApiInternals={true}
+          onGoogleApiLoaded={({ map, maps }) => {
+            if(countriesLatLong !== undefined)
+              Object.entries(countriesLatLong).map((country) => {
+                let countries = country[1];
 
-                        renderMarker(
-                          map,
-                          maps,
-                          Number(countries.latitude),
-                          Number(countries.longitude),
-                          countries.name,
-                          this.showDataDetails
-                        );
-                      })
-                    }
-                  }
-                />
-              )
+                renderMarker(
+                  map,
+                  maps,
+                  Number(countries.latitude),
+                  Number(countries.longitude),
+                  countries.name,
+                  this.showDataDetails
+                );
+              })
             }
           }
-        </DataContext.Consumer>
-
+        />
+            
         <DataOverlay
           show={this.state.showDataDetails}
           country={this.state.country}

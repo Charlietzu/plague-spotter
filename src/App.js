@@ -10,11 +10,14 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 
 class App extends Component {
-  componentWillMount() {
+  state = {
+    countriesJson: countries.countries[0],
+    countriesDensity: countriesDensity,
+  }
+
+  componentDidMount(){
     getWorldData().then((json) => {
       this.setState({
-        countriesJson: countries,
-        countriesDensity: countriesDensity,
         countriesCovid: json,
       });
     });

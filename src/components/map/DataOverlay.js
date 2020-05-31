@@ -10,14 +10,14 @@ export class DataOverlay extends Component {
     show: false,
     haveData: true,
   };
-  
+
   hide = () => {
     this.setState({
       show: false,
     });
   };
 
-  componentWillReceiveProps(newProps) {
+  UNSAFE_componentWillReceiveProps(newProps) {
     if (newProps.show !== this.state.show) {
       this.setState({ show: newProps.show, country: newProps.country });
       this.getData(newProps.country, (data) => {
