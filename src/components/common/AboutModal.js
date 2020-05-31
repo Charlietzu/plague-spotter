@@ -59,33 +59,29 @@ function AboutModal(props) {
             ton.algo.freitas@gmail.com
           </a>
         </p>
-        <h5>Carlos</h5>
-        <h6>
-          Control and Automation Engineer, graduated at UTFPR in Curitiba, acts
-          as software development engineer.{" "}
-        </h6>
+        <h5>Carlos Eduardo de Latorre Santos Correia</h5>
+        <h6>High School student, graduating in Industrial Mechanics. </h6>
         <p>
           Linkedin:{" "}
-          <a href="https://www.linkedin.com/in/mendoncaalex/">
-            https://www.linkedin.com/in/mendoncaalex/
+          <a href="https://www.linkedin.com/in/dudu-de-a746081ab/<">
+            https://www.linkedin.com/in/dudu-de-a746081ab/
           </a>
           <br />
           E-mail:{" "}
-          <a href="mailto:alextorezin@gmail.com">alextorezin@gmail.com</a>
+          <a href="mailto:delatorredudu3@gmail.com">delatorredudu3@gmail.com</a>
         </p>
-        <h5>Tales</h5>
-        <h6>
-          Control and Automation Engineer, graduated at UTFPR in Curitiba, acts
-          as software develpment engineer.{" "}
-        </h6>
+        <h5>Tales Lopes Ramos</h5>
+        <h6>Fullstack Developer, graduating at UFMG in Belo Horizonte. </h6>
         <p>
           Linkedin:{" "}
-          <a href="https://www.linkedin.com/in/mendoncaalex/">
-            https://www.linkedin.com/in/mendoncaalex/
+          <a href="https://www.linkedin.com/in/tales-l-ramos/">
+            https://www.linkedin.com/in/tales-l-ramos/
           </a>
           <br />
           E-mail:{" "}
-          <a href="mailto:alextorezin@gmail.com">alextorezin@gmail.com</a>
+          <a href="mailto:taleslopesramos@gmail.com">
+            taleslopesramos@gmail.com
+          </a>
         </p>
         <h5>Caio César Silva</h5>
         <h6>Front-end Developer, graduating at UFMG in Belo Horizonte. </h6>

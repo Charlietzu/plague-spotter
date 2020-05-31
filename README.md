@@ -20,6 +20,8 @@ This will start the application at:
 
 # PREMAP Collaborators
 
+This project was made for NASA International Space Apps Challenge, our team is named PREMAP, here is the collaborators info:
+
 Alex Mendonça<br />
 Control and Automation Engineer, graduated at UTFPR in Curitiba, acts as software development engineer.<br />
 Linkedin: https://www.linkedin.com/in/mendoncaalex/<br />
@@ -29,6 +31,16 @@ Ton Freitas<br />
 UX Designer.<br />
 Linkedin: https://www.linkedin.com/in/ton-freitas<br />
 Email: ton.algo.freitas@gmail.com <br />
+
+Carlos Eduardo de Latorre Santos Correia<br />
+High School student, graduating in Industrial Mechanics.<br />
+Linkedin: https://www.linkedin.com/in/dudu-de-a746081ab/<br />
+Email: delatorredudu3@gmail.com <br />
+
+Tales Lopes Ramos<br />
+Fullstack Developer, graduating at UFMG in Belo Horizonte.<br />
+Linkedin: https://www.linkedin.com/in/tales-l-ramos/<br />
+Email: taleslopesramos@gmail.com <br />
 
 Caio César Silva<br />
 Front-end Developer, graduating at UFMG in Belo Horizonte.<br />
