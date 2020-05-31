@@ -33,7 +33,8 @@ class App extends Component {
           <Header />
           <Switch>
             <Route exact path="/" component={MapManager} />
-            {/*INSERIR ROTA PARA A PÁGINA ABOUT AQUI */}
+            <Route exact path="/map" component={MapManager} />
+            <Route exact path="/plague-spotter" component={MapManager} />
           </Switch>
         </div>
       </DataContext.Provider>
