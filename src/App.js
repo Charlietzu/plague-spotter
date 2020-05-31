@@ -6,7 +6,7 @@ import { Route, Switch } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 function App() {
   return (
-    <div>
+    <div style={{height:'100vh'}}>
       <Header />
       <Switch>
         <Route exact path="/" component={MapManager} />

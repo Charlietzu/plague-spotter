@@ -30,8 +30,9 @@ class MapManager extends Component {
   };
 
   render() {
+    const windowH = window.innerHeight -56
     return (
-      <div style={{ height: "100vh", width: "100%" }}>
+      <div style={{ height: windowH, width: "100%" }}>
         <GoogleMapReact
           bootstrapURLKeys={{ key: API_KEY }}
           defaultCenter={this.props.center}
