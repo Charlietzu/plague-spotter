@@ -46,7 +46,20 @@ function AboutModal(props) {
           E-mail:{" "}
           <a href="mailto:alextorezin@gmail.com">alextorezin@gmail.com</a>
         </p>
-        <h5>Alex Mendonça</h5>
+        <h5>Ton Freitas</h5>
+        <h6>UX Designer. </h6>
+        <p>
+          Linkedin:{" "}
+          <a href="https://www.linkedin.com/in/ton-freitas">
+            https://www.linkedin.com/in/ton-freitas
+          </a>
+          <br />
+          E-mail:{" "}
+          <a href="mailto:ton.algo.freitas@gmail.com">
+            ton.algo.freitas@gmail.com
+          </a>
+        </p>
+        <h5>Carlos</h5>
         <h6>
           Control and Automation Engineer, graduated at UTFPR in Curitiba, acts
           as software develpment engineer.{" "}
@@ -60,7 +73,7 @@ function AboutModal(props) {
           E-mail:{" "}
           <a href="mailto:alextorezin@gmail.com">alextorezin@gmail.com</a>
         </p>
-        <h5>Alex Mendonça</h5>
+        <h5>Tales</h5>
         <h6>
           Control and Automation Engineer, graduated at UTFPR in Curitiba, acts
           as software develpment engineer.{" "}

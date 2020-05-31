@@ -20,7 +20,6 @@ class MapManager extends Component {
   state = {
     showDataDetails: false,
     country: undefined,
-    countrieNames: undefined,
   };
 
   showDataDetails = (country) => {
