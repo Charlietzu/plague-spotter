@@ -1,9 +1,11 @@
 import React, { Component } from "react";
 import "./DataOverlay.css";
-import { getWorldData } from "../../util/covid_api";
+// import { getWorldData } from "../../util/covid_api";
 import { Button } from "react-bootstrap";
+import DataContext from '../../data/DataContext'
 
 export class DataOverlay extends Component {
+  static contextType = DataContext
   state = {
     show: false,
     haveData: true,
@@ -34,9 +36,12 @@ export class DataOverlay extends Component {
     }
   }
 
-  async getData(country, callback) {
-    let world = await getWorldData();
+  getData(country, callback) {
+    let world = this.context.countriesCovid;
+    console.log(world)
+    
     let countryObj = world.filter((data) => data.country === country)[0];
+
     if (!countryObj) {
       this.setState({ haveData: false });
     } else {
