@@ -6,11 +6,12 @@ import { Route, Switch } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 function App() {
   return (
-    <div style={{height:'100vh'}}>
+    <div style={{ height: "100vh" }}>
       <Header />
       <Switch>
         <Route exact path="/" component={MapManager} />
-        {/*INSERIR ROTA PARA A PÁGINA ABOUT AQUI */}
+        <Route exact path="/map" component={MapManager} />
+        <Route exact path="/plague-spotter" component={MapManager} />
       </Switch>
     </div>
   );
