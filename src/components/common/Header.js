@@ -7,7 +7,7 @@ function Header() {
   return (
     <>
       <Navbar bg="dark" variant="dark">
-        <Navbar.Brand href="/">PREMAP</Navbar.Brand>
+        <Navbar.Brand href="/plague-spotter">PREMAP</Navbar.Brand>
         <Nav className="mr-auto">
           <Nav.Link onClick={() => setModalShow(true)}>About</Nav.Link>
         </Nav>
