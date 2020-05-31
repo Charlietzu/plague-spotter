@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import "./DataOverlay.css";
-// import { getWorldData } from "../../util/covid_api";
 import { Button } from "react-bootstrap";
 import DataContext from '../../data/DataContext'
 
@@ -38,7 +37,6 @@ export class DataOverlay extends Component {
 
   getData(country, callback) {
     let world = this.context.countriesCovid;
-    console.log(world)
     
     let countryObj = world.filter((data) => data.country === country)[0];
 
