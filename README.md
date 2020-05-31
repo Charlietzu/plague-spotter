@@ -1,6 +1,6 @@
 # PLAGUE-SPOTTER by PREMAP
 
-This repository contains a application that provides a COVID-19 data visualizer by country. It was made using React and makes requests for a third-party API and a JSON file that contains all the data to be manipulated. <br />
+This repository contains a application that provides a COVID-19 data visualizer by country. It was made using React and Google Maps React and makes requests for a third-party API and a JSON file that contains all the data to be manipulated. <br />
 
 We plan to implement some improvements, like populational density and CO2 emition data, and show relational graphics using these data.
 
