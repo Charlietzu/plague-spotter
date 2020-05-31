@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import GoogleMapReact from "google-map-react";
 import renderMarker from "./Marker";
 import DataOverlay from "./DataOverlay.js";
-import { getWorldData } from '../../util/covid_api'
+import { getWorldData } from "../../util/covid_api";
 
 var countriesData = require("../../data/countries.json");
 const API_KEY = "AIzaSyDEZBGmstNOX29tWnSVv_Auy3U-mRgmAfY";
@@ -13,21 +13,21 @@ class MapManager extends Component {
       lat: -15.76972,
       lng: -47.92972,
     },
-    zoom: 11,
+    zoom: 0,
     countriesData: countriesData.countries[0],
   };
 
   state = {
-    showDataDetails:false,
-    country:undefined
-  }
+    showDataDetails: false,
+    country: undefined,
+  };
 
   iterateTest() {
     let countriesJSON = {};
     let countriesAPI = {};
 
     Object.entries(this.props.countriesData).map((country) => {
-      let countriesJSONAux= {}
+      let countriesJSONAux = {};
       countriesJSONAux[country[0]] = country[1];
       countriesJSON = Object.assign(countriesJSON, countriesJSONAux);
     });
@@ -37,20 +37,18 @@ class MapManager extends Component {
         countriesAPI[countryAPI[1].country] = countryAPI[1];
       });
     });
-
-    console.log(countriesJSON);
-    console.log(countriesAPI);
+    console.log(countriesAPI.Brazil);
   }
 
   showDataDetails = (country) => {
     this.setState({
-      showDataDetails:true, 
-      country
-    })
-  }
+      showDataDetails: true,
+      country,
+    });
+  };
 
   render() {
-    this.iterateTest()
+    this.iterateTest();
     return (
       <div style={{ height: "100vh", width: "100%" }}>
         <GoogleMapReact
@@ -73,9 +71,9 @@ class MapManager extends Component {
           }
         />
 
-        <DataOverlay 
-        show={this.state.showDataDetails} 
-        country={this.state.country}
+        <DataOverlay
+          show={this.state.showDataDetails}
+          country={this.state.country}
         />
       </div>
     );
