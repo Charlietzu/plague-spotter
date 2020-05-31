@@ -1,10 +1,10 @@
 import React, { Component } from "react";
 import "./DataOverlay.css";
 import { Button } from "react-bootstrap";
-import DataContext from '../../data/DataContext'
+import DataContext from "../../data/DataContext";
 
 export class DataOverlay extends Component {
-  static contextType = DataContext
+  static contextType = DataContext;
 
   state = {
     show: false,
@@ -22,10 +22,10 @@ export class DataOverlay extends Component {
       this.setState({ show: newProps.show, country: newProps.country });
       this.getData(newProps.country, (data) => {
         if (data === false) return;
-        
+
         let { infected, tested, recovered, deceased, density } = data;
-        
-        if(density == null) density = "N/A"
+
+        if (density == null) density = "N/A";
 
         this.setState({
           show: newProps.show,
@@ -42,15 +42,17 @@ export class DataOverlay extends Component {
 
   getData(country, callback) {
     let world = this.context.countriesCovid;
-    let worldDensity = this.context.countriesDensity
+    let worldDensity = this.context.countriesDensity;
 
     let countryObj = world.filter((data) => data.country === country)[0];
-    let countryDensity = worldDensity.filter(data => data.country === country)[0];
+    let countryDensity = worldDensity.filter(
+      (data) => data.country === country
+    )[0];
 
     if (!countryObj) {
       this.setState({ haveData: false });
     } else {
-      countryObj = Object.assign(countryObj, countryDensity)
+      countryObj = Object.assign(countryObj, countryDensity);
       this.setState({ haveData: true });
     }
 
@@ -61,22 +63,24 @@ export class DataOverlay extends Component {
     if (this.state.haveData) {
       return (
         <div className="data-body">
-          <div>Density: </div>
+          <div className="font-weight-bold">Pop. Density:</div>
           <div>{this.state.density}</div>
-          <div>Tested: </div>
+          <div className="font-weight-bold">Tested: </div>
           <div>{this.state.tested}</div>
-          <div>Infected: </div>
+          <div className="font-weight-bold">Infected: </div>
           <div>{this.state.infected}</div>
-          <div>Deaths: </div>
+          <div className="font-weight-bold">Deaths: </div>
           <div>{this.state.deceased}</div>
-          <div>Recovered: </div>
+          <div className="font-weight-bold">Recovered: </div>
           <div>{this.state.recovered}</div>
         </div>
       );
     } else {
       return (
         <div className="ml-3">
-          <p>Sorry, we still don't have this data. :(</p>
+          <p className="font-weight-bold">
+            Sorry, we still don't have this data. :(
+          </p>
         </div>
       );
     }
