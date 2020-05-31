@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import GoogleMapReact from "google-map-react";
 import renderMarker from "./Marker";
 import DataOverlay from "./DataOverlay.js";
-import { getWorldData } from "../../util/covid_api";
 
 var countriesData = require("../../data/countries.json");
 const API_KEY = "AIzaSyDEZBGmstNOX29tWnSVv_Auy3U-mRgmAfY";
