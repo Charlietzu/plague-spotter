@@ -96,6 +96,13 @@ function AboutModal(props) {
             caiocesarsilva08@gmail.com
           </a>
         </p>
+        <h4>Project Repository</h4>
+        <p>
+          See the source code here:{" "}
+          <a href="https://github.com/Charlietzu/plague-spotter">
+            https://github.com/Charlietzu/plague-spotter
+          </a>
+        </p>
       </Modal.Body>
       <Modal.Footer>
         <Button onClick={props.onHide}>Close</Button>
