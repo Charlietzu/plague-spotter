@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/plague-spotter/precache-manifest.f9f9d3715340fe2a57c3a3a28447e857.js"
+  "/plague-spotter/precache-manifest.7eaf5263956967926e3591a3c26c6e08.js"
 );
 
 self.addEventListener('message', (event) => {
